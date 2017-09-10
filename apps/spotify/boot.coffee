@@ -5,7 +5,7 @@
 # and run to bootstrap the app into hubot
 
 # Get the spotify client
-Spotify = require './libs/client'
+Spotify = require __dirname + '/libs/Client'
 
 module.exports = (robot) ->
 
@@ -21,7 +21,7 @@ module.exports = (robot) ->
         client.tokens = robot.brain.get 'app:spotify:tokens' or {}
 
     # add routes to hubot
-    require('./routes.coffee')(robot, client);
+    require(__dirname + '/routes.coffee')(robot, client);
 
     # add commands to hubot
-    require('./commands.coffee')(robot, client);
+    require(__dirname + '/commands.coffee')(robot, client);
