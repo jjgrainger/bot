@@ -20,12 +20,12 @@
 #   <optional notes required for the script>
 #
 # Author:
-#   jjgrainger <josephgrainger@gmail.com>
+#   jjgrainger <github@jjgrainger.co.uk>
 
 module.exports = (robot) ->
 
-    # get the bootstrap script for spotify app
-    bootstrap = require './../apps/spotify/boot.coffee'
+  # get the bootstrap script for spotify app
+  boot = require './../apps/spotify/boot.coffee'
 
-    # run bootstrap
-    bootstrap(robot)
+  # run bootstrap
+  boot robot
