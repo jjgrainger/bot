@@ -1,9 +1,9 @@
 {
   "name": "bot",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
-  "author": "Joe Grainger <joe@venncreative.co.uk>",
-  "description": "A simple helpful robot for your Company",
+  "author": "Joe Grainger <github@jjgrainger.co.uk>",
+  "description": "A personal chatbot for Slack, built on top of hubot",
   "dependencies": {
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.2",
