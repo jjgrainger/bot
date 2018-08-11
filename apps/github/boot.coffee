@@ -5,3 +5,4 @@ module.exports = (robot) ->
 
   # add event handlers (listeners) to Hubot
   require(__dirname + '/handlers/issues.coffee')(robot)
+  require(__dirname + '/handlers/pull_request.coffee')(robot)
