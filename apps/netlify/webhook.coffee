@@ -17,5 +17,3 @@ module.exports = (robot) ->
     robot.emit "webhook:netlify:#{data.event}", data
 
     res.end "ok"
-
-  # https://6bc685a7.ngrok.io/hubot/webhook/netlify?room=ohthatsnice

@@ -1,10 +1,8 @@
 module.exports = (robot) ->
-
-
+  # send notification when a deploy was successful
   robot.on "webhook:netlify:deploy_created", (data) ->
     # get the room for the notification
     room = data.query.room or 'bot-tests'
-    room = 'bot-tests'
 
     # parse the deploy date for Slack
     deploy_date = Date.parse(data.payload.published_at)
