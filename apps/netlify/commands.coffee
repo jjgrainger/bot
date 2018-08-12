@@ -24,11 +24,7 @@ module.exports = (robot) ->
     # if we have a build hook, use it
     if build_hook
       request.post "https://api.netlify.com/build_hooks/#{build_hook}", (err, res, body) ->
-        robot.logger.info "hubot/netlify: build_hook triggered:", {
-          build_hook: build_hook,
-          site_id: site_id
-          response: body
-        }
+        robot.logger.info "hubot/netlify: build_hook triggered: { build_hook: #{build_hook}, site_id: #{site_id} response: #{body} }"
 
     # no build hook, lets create one
     else

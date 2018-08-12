@@ -1,6 +1,5 @@
 module.exports = (robot) ->
-
-
+  # send notification when a deploy has been stated
   robot.on "webhook:netlify:deploy_building", (data) ->
     # get the room for the notification
     room = data.query.room or 'bot-tests'
