@@ -1,6 +1,12 @@
 # Description
 #   Display notification message for Netlify webhook
 #
+# Configuration:
+#   NETLIFY_ACCESS_TOKEN
+#
+# Commands:
+#   hubot netlify deploy <site_id> - trigger a deploy
+#
 # Author:
 #   jjgrainger <github@jjgrainger.co.uk>
 
