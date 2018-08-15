@@ -19,7 +19,7 @@ module.exports = (robot) ->
 
     # setup request options
     options = {
-      url: 'http://api.icndb.com/jokes/random',
+      url: 'http://api.icndb.com/jokes/random?escape=javascript',
     }
 
     # if the name matches 'me'
@@ -35,7 +35,7 @@ module.exports = (robot) ->
       # set first and last name as query string options
       options.qs = {
         firstName: name[0],
-        lastName: name[1] || ''
+        lastName: name[1] || '{{lastName}}'
       }
 
     # display request options in debugging
@@ -47,9 +47,9 @@ module.exports = (robot) ->
 
       if data.type == 'success'
         # get joke, remove double space when no last name
-        joke = data.value.joke.replace '  ', ' '
+        joke = data.value.joke.replace ' {{lastName}}', ''
 
-        msg.send "> #{joke}"
+        msg.send ">#{joke}"
       else
         msg.send "Uh oh?! Looks like something went wrong..."
 
